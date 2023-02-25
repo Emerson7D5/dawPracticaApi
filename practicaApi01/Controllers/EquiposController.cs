@@ -18,7 +18,7 @@ namespace practicaApi01.Controllers
 
         [HttpGet]
         [Route("getall")]
-        public IActionResult GetAll()
+        public IActionResult GetAllEquipos()
         {
             var listadoEquipo = (from e in _equiposContext.equipos
                                  select e).ToList();
@@ -28,5 +28,7 @@ namespace practicaApi01.Controllers
             return Ok(listadoEquipo);
 
         }
+
+
     }
 }
